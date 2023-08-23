@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+    <title>Front</title>
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="">
+        <h1 class="header-h1">Breweries</h1>
+        <p>A breweries list by Open Brewery DB</p>
+      </div>
+      <nav id="nav" class="nav">
+        <input type="checkbox" id="checkbox" class="checkbox" />
+        <label for="checkbox" class="label-menu"
+          >Menu<span class="hamburguer"></span
+        ></label>
+
+        <ul id="menu" class="menu">
+          <li><a href="#">Cadastrar Noticia</a></li>
+          <li><a href="#">Exibir Noticia</a></li>
+          <li>
+            <div class="lupsearch"><input type="text" /></div>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <section class="container">
+      <div id="" class="grid-item">
+        <h1 id="brewerieName"></h1>
+        <br /><br />
+        <pre id="gridItem"></pre>
+        <p id="brewerieDescription">
+        </p>
+        <div class="containebtt" id="containebtt">
+          <button type="button" id="btt" name="Acessar">
+            Acessar
+          </button>
+        </div>
+      </div>
+      <ul id="breweries-list"></ul>
+    </section>
+    <script src="index.js"></script>
+  </body>
+</html>
