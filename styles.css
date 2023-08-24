@@ -19,6 +19,14 @@ header {
   padding: 1rem;
 }
 
+h1 {
+  color: #ffff;
+}
+
+.subp {
+  color: #ffff;
+}
+
 .logo {
   color: #ffff;
 }
@@ -29,7 +37,7 @@ header input {
 /*RESPONSIVIDADE*/
 
 header input {
-  background-image: url("search-alt-1-svgrepo-com.svg");
+  background-image: url('search-alt-1-svgrepo-com.svg');
   background-repeat: no-repeat;
   height: 30px;
   border-radius: 10px;
@@ -101,7 +109,7 @@ header input {
 
   .hamburguer::before,
   .hamburguer::after {
-    content: " ";
+    content: ' ';
     display: block;
     width: 1.25rem;
     height: 0.125rem;
@@ -134,20 +142,22 @@ header input {
 /*Formatação corpo noticia*/
 
 .container {
-  display: grid;
-  grid-template-columns: auto auto auto auto;
-  margin-bottom: 10%;
-  display: flex;
-  flex-wrap: wrap; 
+  margin: 0 auto;
 }
 
 .grid-item {
-  flex-grow: 1; /*DETERINA O TAMANHO DO ITEM COM RELAÇÃO AO RESTANTE DOS ITENS*/
-  flex-basis: 350px;
-  background-color: rgb(255, 255, 255);
-  height: 450px;
-  margin: 20px;
+  display: grid;
+  justify-content: center;
+  justify-items: center;
+  grid-template-columns: repeat(auto-fit, 300px);
+  grid-gap: 100px;
+  margin: 50px;
+}
+
+.brewery-item {
   padding: 20px;
+  background-color: #ddd;
+  cursor: pointer;
 }
 
 #btt {
