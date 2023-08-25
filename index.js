@@ -1,3 +1,7 @@
+document.getElementById("backbutton").addEventListener("click", () => {
+  window.location.href = "/index.html";
+});
+
 fetch(`https://api.openbrewerydb.org/v1/breweries/`)
   .then((res) => res.json())
   .then((data) => {
@@ -25,26 +29,32 @@ fetch(`https://api.openbrewerydb.org/v1/breweries/`)
           gridItem.innerHTML = "";
           address.innerHTML = "";
 
+          // TYPE CONFIG
           const type = document.createElement("p");
           type.textContent = `Type: ${item.brewery_type}`;
           div.appendChild(type);
 
+          // STREET CONFIG
           const street = document.createElement("p");
           street.textContent = `Street: ${item.street}`;
           div.appendChild(street);
 
+          // CITY CONFIG
           const city = document.createElement("p");
           city.textContent = `City: ${item.city}`;
           div.appendChild(city);
 
+          // STATE CONFIG
           const state = document.createElement("p");
           city.textContent = `State: ${item.state}`;
           div.appendChild(state);
 
+          // POSTALCODE CONFIG
           const postal_code = document.createElement("p");
           postal_code.textContent = `Postal code: ${item.postal_code}`;
           div.appendChild(postal_code);
 
+          // COUNTRY CONFIG
           const country = document.createElement("p");
           country.textContent = `Country: ${item.country}`;
           div.appendChild(country);
@@ -75,15 +85,11 @@ fetch(`https://api.openbrewerydb.org/v1/breweries/`)
 
           locate.href = `https://www.google.com.br/maps?q=${item.latitude},${item.longitude}`;
           locate.textContent = `${item.latitude}, ${item.longitude}`;
-          div.appendChild(locateText)
+          div.appendChild(locateText);
           div.appendChild(locate);
 
           // BUTTON BACK
-          document
-            .getElementById("backbutton")
-            .addEventListener("click", () => {
-              window.location.href = `/index.html`;
-            });
+          document.getElementById("backbutton").classList.remove("hidden");
 
           container.appendChild(div);
           contentAdded = true;
