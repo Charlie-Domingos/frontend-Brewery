@@ -171,6 +171,7 @@ header input {
   color: #ffff;
   border-radius: 5px;
   font-size: 1.5rem;
+  cursor: pointer;
 }
 
 @media (max-width: 1024px){
