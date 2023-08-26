@@ -139,6 +139,21 @@ header input {
   }
 }
 
+@media (max-width: 1024px){
+  .backbutton {
+    position: fixed;
+    bottom: 20px; /* Distância do fundo da página */
+    left: 75%;
+    width: 15%;
+    background-color: #444444;
+    color: #fff;
+    border-radius: 15px;
+    cursor: pointer;
+    font-size: 1.5rem;
+  }
+}
+
+
 /*Formatação corpo noticia*/
 
 .grid-item {
@@ -174,17 +189,8 @@ header input {
   cursor: pointer;
 }
 
-@media (max-width: 1024px){
-  .backbutton {
-    position: fixed;
-    bottom: 20px; /* Distância do fundo da página */
-    left: 75%;
-    width: 15%;
-    background-color: #444444;
-    color: #fff;
-    border-radius: 15px;
-    cursor: pointer;
-    font-size: 1.5rem;
-  }
+.pageNumberButton {
+  padding: 10px;
 }
+
 
