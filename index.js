@@ -124,12 +124,20 @@ const updatePageButtons = () => {
     const pageNumberButton = document.createElement('button')
     pageNumberButton.textContent = i
     pageNumberButton.classList.add('pageNumberButton')
+
+    // If page number equals currentPage then add color on it
+    if (i === currentPage) {
+      pageNumberButton.classList.add('active')
+    }
+
     pageNumberButton.addEventListener('click', () => {
       currentPage = i
       gridItem.innerHTML = ''
+
       fetchPage()
       updatePageButtons()
     })
+
     pageNumbersDiv.appendChild(pageNumberButton)
   }
 }

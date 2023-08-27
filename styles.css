@@ -98,14 +98,16 @@ header input {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-bottom: 50px;
 }
 
 .pageNumberButton {
   padding: 8px;
   margin: 5px;
+  background-color: #fff;
 }
 
 .pageNumberButton.active {
-  background-color: #ca1f1f;
+  background-color: #444444;
   color: #fff;
 }
