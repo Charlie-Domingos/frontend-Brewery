@@ -36,18 +36,92 @@ const fetchPage = () => {
         div.appendChild(address)
 
         // TYPE CONFIG
-        const type = document.createElement('p')
-        type.textContent = `Type: ${item.brewery_type}`
+        const typeStyles = {
+          micro: {
+            backgroundColor: '#00768d',
+            color: '#fff',
+            margin: '100px 0px 0px 0px',
+            padding: '4px',
+            width: '50px',
+            border: '1px solid #ccc'
+            // Adicione outros estilos conforme necessário
+          },
+          large: {
+            backgroundColor: '#3d6f02',
+            padding: '4px',
+            margin: '100px 0px 0px 0px',
+            width: '48px',
+            color: '#fff',
+            border: '1px solid #ccc'
+            // Adicione outros estilos conforme necessário
+          },
+          brewpub: {
+            backgroundColor: '#ffde60',
+            padding: '4px',
+            margin: '100px 0px 0px 0px',
+            width: '70px',
+            color: '#000',
+            border: '1px solid #ccc'
+            // Adicione outros estilos conforme necessário
+          },
+          closed: {
+            backgroundColor: '',
+            padding: '12px',
+            margin: '100px 0px 0px 0px',
+            width: '70px',
+            border: '1px solid #ccc'
+            // Adicione outros estilos conforme necessário
+          },
+          contract: {
+            backgroundColor: '#ff6925',
+            color: '#fff',
+            padding: '4px',
+            margin: '100px 0px 0px 0px',
+            width: '70px',
+            border: '1px solid #ccc'
+            // Adicione outros estilos conforme necessário
+          },
+          proprietor: {
+            backgroundColor: '#4836ab',
+            color: '#fff',
+            padding: '4px',
+            margin: '100px 0px 0px 0px',
+            width: '78px',
+            border: '1px solid #ccc'
+            // Adicione outros estilos conforme necessário
+          }
+
+          // Adicione outros tipos e estilos conforme necessário
+        }
+
+        const type = document.createElement('div')
+        type.textContent = `${item.brewery_type}`
+        type.className = 'typeItem'
+
+        const styles = typeStyles[item.brewery_type]
+        for (const property in styles) {
+          type.style[property] = styles[property]
+        }
+
         div.appendChild(type)
+
+        console.log(item.brewery_type)
 
         let contentAdded = false
 
         // This function show more details about brewery, when you click on it
         function detailsBrewery() {
           div.addEventListener('click', () => {
+            type.removeAttribute('style') // CSS TYPESTYLE REMOVE
+            type.innerHTML = ''
+            document.getElementById('pageNumbers').classList.add('hidden') // Add hidden pageNumbers
             if (!contentAdded) {
               gridItem.innerHTML = ''
               address.innerHTML = ''
+
+              const type = document.createElement('p')
+              type.textContent = `Type: ${item.brewery_type}`
+              div.appendChild(type)
 
               // STREET CONFIG
               const street = document.createElement('p')
