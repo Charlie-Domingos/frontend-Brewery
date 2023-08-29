@@ -18,15 +18,28 @@
     </div>
   </header>
   <section class="container">
-    <div id="gridItem" class="grid-item">
+    <div class="filter ">
+      <p>Filter</p>
+      <select id="filterType" class="filterType">
+        <option value="">Todos</option>
+        <option value="micro">micro</option>
+        <option value="nano">nano</option>
+        <option value="regional">regional</option>
+        <option value="brewpub">brewpub</option>
+        <option value="large">large</option>
+        <option value="planning">planning</option>
+        <option value="bar">bar</option>
+        <option value="contract">contract</option>
+        <option value="proprietor">proprietor</option>
+        <option value="closed">closed</option>
+      </select>
     </div>
+    <div id="gridItem" class="grid-item"></div>
     <div id="brewery-details"><button id="backbutton" class="backbutton hidden">
         <</button> </div> <div class="pagination">
           <div id="pageNumbers" class="pageNumbers">
           </div>
     </div>
-
-
   </section>
 
   <script src="index.js"></script>

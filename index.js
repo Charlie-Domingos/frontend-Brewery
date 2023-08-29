@@ -12,10 +12,18 @@ const fetchPage = () => {
   )
     .then(res => res.json())
     .then(data => {
-      const container = document.getElementById('gridItem')
-      console.log(data)
+      const filterType = document.getElementById('filterType')
+      const filteredType = filterType.value
 
-      data.forEach(item => {
+      let filteredItens = data
+      if (filteredType) {
+        filteredItens = data.filter(item => item.brewery_type === filteredType)
+      }
+
+      const container = document.getElementById('gridItem')
+      container.innerHTML = ''
+
+      filteredItens.forEach(item => {
         const div = document.createElement('div')
         div.className = 'brewery-item'
 
@@ -25,8 +33,12 @@ const fetchPage = () => {
 
         const address = document.createElement('p')
         address.textContent = `${item.address_1} - ${item.state_province} - ${item.postal_code} ${item.country}`
-
         div.appendChild(address)
+
+        // TYPE CONFIG
+        const type = document.createElement('p')
+        type.textContent = `Type: ${item.brewery_type}`
+        div.appendChild(type)
 
         let contentAdded = false
 
@@ -36,11 +48,6 @@ const fetchPage = () => {
             if (!contentAdded) {
               gridItem.innerHTML = ''
               address.innerHTML = ''
-
-              // TYPE CONFIG
-              const type = document.createElement('p')
-              type.textContent = `Type: ${item.brewery_type}`
-              div.appendChild(type)
 
               // STREET CONFIG
               const street = document.createElement('p')
@@ -98,7 +105,8 @@ const fetchPage = () => {
 
               // REMOVE HIDDEN backButton
               document.getElementById('backbutton').classList.remove('hidden')
-              document.getElementById('pageNumbers').classList.add('hidden')
+              // ADD HIDDEN FILTER IN DETAILS BREWERY
+              document.querySelector('.filter').classList.add('hidden')
 
               container.appendChild(div)
               contentAdded = true
@@ -145,3 +153,9 @@ const updatePageButtons = () => {
 // Load first page
 fetchPage()
 updatePageButtons()
+
+const filterType = document.getElementById('filterType')
+filterType.addEventListener('change', () => {
+  currentPage = 1
+  fetchPage()
+})
