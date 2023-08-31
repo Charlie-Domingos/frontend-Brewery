@@ -24,6 +24,12 @@ h1 {
   color: #ffff;
 }
 
+h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  font-family: 'Roboto', sans-serif;
+}
+
 .subp {
   color: #ffff;
 }
@@ -87,7 +93,7 @@ header input {
   justify-content: center;
   justify-items: center;
   grid-template-columns: repeat(auto-fit, 300px);
-  grid-gap: 100px;
+  grid-gap: 16px;
   margin: 50px;
 }
 
