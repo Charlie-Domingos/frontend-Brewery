@@ -1,5 +1,24 @@
 # frontend-Brewery
 
+Para fins de comparação e compreensão do que foi proposto dê uma olhada no desafio [aqui](https://github.com/Charlie-Domingos/desafio-frontend).
+
+## Layout proposto
+
+### Brewery Home
+<img src="./assetsReadme/breweryList.png">
+
+### Brewery Detail
+<img src="./assetsReadme/detailsBrewery.png">
+
+## Meu layout
+
+### Brewery Home
+<img src="./assetsReadme/mybreweryList.png">
+
+### Brewery Detail
+<img src="./assetsReadme/mydetailsBrewery.png">
+
+
 ## 📌Clonando o repositório
 
 Para rodar este projeto na sua maquina basta seguir o passo a passo abaixo:
