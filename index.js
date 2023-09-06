@@ -43,8 +43,7 @@ const fetchPage = () => {
             margin: '100px 0px 0px 0px',
             padding: '4px',
             width: '50px',
-            border: '1px solid #ccc'
-            // Adicione outros estilos conforme necessário
+            border: '1px solid #ccc'      
           },
           large: {
             backgroundColor: '#3d6f02',
@@ -53,7 +52,6 @@ const fetchPage = () => {
             width: '48px',
             color: '#fff',
             border: '1px solid #ccc'
-            // Adicione outros estilos conforme necessário
           },
           brewpub: {
             backgroundColor: '#ffde60',
@@ -62,7 +60,6 @@ const fetchPage = () => {
             width: '70px',
             color: '#000',
             border: '1px solid #ccc'
-            // Adicione outros estilos conforme necessário
           },
           closed: {
             backgroundColor: '',
@@ -70,7 +67,6 @@ const fetchPage = () => {
             margin: '100px 0px 0px 0px',
             width: '70px',
             border: '1px solid #ccc'
-            // Adicione outros estilos conforme necessário
           },
           contract: {
             backgroundColor: '#ff6925',
@@ -79,7 +75,6 @@ const fetchPage = () => {
             margin: '100px 0px 0px 0px',
             width: '70px',
             border: '1px solid #ccc'
-            // Adicione outros estilos conforme necessário
           },
           proprietor: {
             backgroundColor: '#4836ab',
@@ -88,10 +83,7 @@ const fetchPage = () => {
             margin: '100px 0px 0px 0px',
             width: '78px',
             border: '1px solid #ccc'
-            // Adicione outros estilos conforme necessário
           }
-
-          // Adicione outros tipos e estilos conforme necessário
         }
 
         const type = document.createElement('div')
